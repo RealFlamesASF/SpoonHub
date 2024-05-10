@@ -2214,3 +2214,10 @@ game.Players.PlayerAdded:Connect(function(plr)
 end)
    end,
 })
+
+local Button = MainTab:CreateButton({
+   Name = "Blox Fruits",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiSupremacy/Loader.xyz/main/Loader.Blurk%20ST%20%3A%20G"))()
+   end,
+})
