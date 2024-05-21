@@ -21,7 +21,7 @@ local Load = Instance.new("TextButton")
 --Properties:
 
 Krampus.Name = "Krampus"
-Krampus.Parent = game.Workspace
+Krampus.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Krampus.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -171,26 +171,26 @@ Load.TextSize = 14.000
 
 -- Scripts:
 
-local function LYBXPV_fake_script() -- Execute.LocalScript 
+local function BOIMTAO_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(BOIMTAO_fake_script)()
+local function HUQNWO_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(script.Parent.Parent.Source.Text)()
 	end)
 end
-coroutine.wrap(LYBXPV_fake_script)()
-local function QGUFVU_fake_script() -- Clear.LocalScript 
+coroutine.wrap(HUQNWO_fake_script)()
+local function PIPW_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Source.Text = ''
 	end)
 end
-coroutine.wrap(QGUFVU_fake_script)()
-local function QUDX_fake_script() -- Main.LocalScript 
-	local script = Instance.new('LocalScript', Main)
-
-	script.Parent.Active = true
-	script.Parent.Draggable = true
-end
-coroutine.wrap(QUDX_fake_script)()
+coroutine.wrap(PIPW_fake_script)()
