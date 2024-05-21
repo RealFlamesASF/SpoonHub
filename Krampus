@@ -1,0 +1,196 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Krampus = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Krampusgg = Instance.new("TextLabel")
+local file = Instance.new("TextLabel")
+local Settings = Instance.new("TextLabel")
+local Console = Instance.new("TextLabel")
+local Themes = Instance.new("TextLabel")
+local Editor = Instance.new("TextLabel")
+local Source = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local Load = Instance.new("TextButton")
+
+--Properties:
+
+Krampus.Name = "Krampus"
+Krampus.Parent = game.Workspace
+Krampus.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Krampus
+Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0186706502, 0, 0.0537447482, 0)
+Main.Size = UDim2.new(0, 348, 0, 263)
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 348, 0, 21)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 348, 0, 23)
+
+Krampusgg.Name = "Krampus.gg"
+Krampusgg.Parent = Frame_2
+Krampusgg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Krampusgg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Krampusgg.BorderSizePixel = 0
+Krampusgg.Position = UDim2.new(0.19252874, 0, -0.913043499, 0)
+Krampusgg.Size = UDim2.new(0, 200, 0, 21)
+Krampusgg.Font = Enum.Font.SourceSans
+Krampusgg.Text = "Krampus.gg"
+Krampusgg.TextColor3 = Color3.fromRGB(255, 255, 255)
+Krampusgg.TextSize = 14.000
+
+file.Name = "file"
+file.Parent = Frame_2
+file.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+file.BorderColor3 = Color3.fromRGB(0, 0, 0)
+file.BorderSizePixel = 0
+file.Position = UDim2.new(-0.00287356321, 0, 0, 0)
+file.Size = UDim2.new(0, 91, 0, 23)
+file.Font = Enum.Font.SourceSans
+file.Text = "File"
+file.TextColor3 = Color3.fromRGB(255, 255, 255)
+file.TextSize = 14.000
+
+Settings.Name = "Settings"
+Settings.Parent = file
+Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(2.29063225, 0, 1.39130437, 0)
+Settings.Size = UDim2.new(0, 59, 0, 21)
+Settings.Font = Enum.Font.SourceSans
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(254, 254, 254)
+Settings.TextSize = 14.000
+
+Console.Name = "Console"
+Console.Parent = Frame_2
+Console.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Console.BorderSizePixel = 0
+Console.Position = UDim2.new(0.225424573, 0, 1.39130437, 0)
+Console.Size = UDim2.new(0, 59, 0, 21)
+Console.Font = Enum.Font.SourceSans
+Console.Text = "Console"
+Console.TextColor3 = Color3.fromRGB(254, 254, 254)
+Console.TextSize = 14.000
+
+Themes.Name = "Themes"
+Themes.Parent = Frame_2
+Themes.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Themes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Themes.BorderSizePixel = 0
+Themes.Position = UDim2.new(0.415079743, 0, 1.39130437, 0)
+Themes.Size = UDim2.new(0, 59, 0, 21)
+Themes.Font = Enum.Font.SourceSans
+Themes.Text = "Themes"
+Themes.TextColor3 = Color3.fromRGB(254, 254, 254)
+Themes.TextSize = 14.000
+
+Editor.Name = "Editor"
+Editor.Parent = Frame_2
+Editor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Editor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Editor.BorderSizePixel = 0
+Editor.Position = UDim2.new(0.041516535, 0, 1.39130437, 0)
+Editor.Size = UDim2.new(0, 59, 0, 21)
+Editor.Font = Enum.Font.SourceSans
+Editor.Text = "Editor"
+Editor.TextColor3 = Color3.fromRGB(254, 254, 254)
+Editor.TextSize = 14.000
+
+Source.Name = "Source"
+Source.Parent = Frame_2
+Source.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Source.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Source.BorderSizePixel = 0
+Source.Position = UDim2.new(0.0172413792, 0, 2.56521749, 0)
+Source.Size = UDim2.new(0, 336, 0, 154)
+Source.Font = Enum.Font.SourceSans
+Source.MultiLine = true
+Source.PlaceholderText = "print(\"krampus\")"
+Source.Text = ""
+Source.TextColor3 = Color3.fromRGB(0, 0, 0)
+Source.TextSize = 14.000
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute.Name = "Execute"
+Execute.Parent = Frame_2
+Execute.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0172413792, 0, 9.69565105, 0)
+Execute.Size = UDim2.new(0, 72, 0, 19)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 14.000
+
+Clear.Name = "Clear"
+Clear.Parent = Frame_2
+Clear.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.258620679, 0, 9.69565105, 0)
+Clear.Size = UDim2.new(0, 72, 0, 19)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 14.000
+
+Load.Name = "Load"
+Load.Parent = Frame_2
+Load.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Load.BorderSizePixel = 0
+Load.Position = UDim2.new(0.494252861, 0, 9.69565105, 0)
+Load.Size = UDim2.new(0, 72, 0, 19)
+Load.Font = Enum.Font.SourceSans
+Load.Text = "Load"
+Load.TextColor3 = Color3.fromRGB(255, 255, 255)
+Load.TextSize = 14.000
+
+-- Scripts:
+
+local function LYBXPV_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(script.Parent.Parent.Source.Text)()
+	end)
+end
+coroutine.wrap(LYBXPV_fake_script)()
+local function QGUFVU_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Source.Text = ''
+	end)
+end
+coroutine.wrap(QGUFVU_fake_script)()
+local function QUDX_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(QUDX_fake_script)()
